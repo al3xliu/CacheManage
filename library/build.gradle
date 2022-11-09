@@ -67,16 +67,16 @@ dependencies {
     errorproneJavac 'com.google.errorprone:javac:9+181-r4173-1'
 }
 
-//gradle.projectsEvaluated {
-//    tasks.withType(JavaCompile).all { compile ->
-//        if (compile.name.contains("CheckTypes")) {
-//            compile.options.compilerArgs += [
-//                    "-Xbootclasspath/p:${configurations.checkerFrameworkAnnotatedJDK.asPath}"
-//            ]
-//            options.fork = true
-//            options.forkOptions.jvmArgs += ["-Xbootclasspath/p:${configurations.errorproneJavac.asPath}"]
-//        }
-//    }
-//}
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile).all { compile ->
+        if (compile.name.contains("CheckTypes")) {
+            compile.options.compilerArgs += [
+                    "-Xbootclasspath/p:${configurations.checkerFrameworkAnnotatedJDK.asPath}"
+            ]
+            options.fork = true
+            options.forkOptions.jvmArgs += ["-Xbootclasspath/p:${configurations.errorproneJavac.asPath}"]
+        }
+    }
+}
 
 apply from: "../bintrayUpload.gradle"
