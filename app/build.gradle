@@ -51,7 +51,7 @@ configurations {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-//  compile project(':library')
+    compile project(':library')
     implementation 'com.github.ronghao:CacheManage:1.3.5'
     implementation 'com.android.support:appcompat-v7:25.3.1'
 
