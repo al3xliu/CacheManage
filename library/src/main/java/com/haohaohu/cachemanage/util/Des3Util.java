@@ -1,6 +1,8 @@
 package com.haohaohu.cachemanage.util;
 
 import android.text.TextUtils;
+import org.checkerframework.common.aliasing.qual.Unique;
+
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
@@ -26,7 +28,7 @@ public class Des3Util {
      * @return 加密文字
      * @throws Exception
      */
-    public static String encode(String plainText, String secretKey, String iv) throws Exception {
+    public static String encode(String plainText, String secretKey, @Unique String iv) throws Exception {
         if (TextUtils.isEmpty(secretKey) || TextUtils.isEmpty(iv)) {
             throw new NullPointerException("u should init first");
         }
@@ -48,7 +50,7 @@ public class Des3Util {
      * @return 解密文字
      * @throws Exception
      */
-    public static String decode(String encryptText, String secretKey, String iv) throws Exception {
+    public static String decode(String encryptText, String secretKey, @Unique String iv) throws Exception {
         if (TextUtils.isEmpty(secretKey) || TextUtils.isEmpty(iv)) {
             throw new NullPointerException("u should init first");
         }
