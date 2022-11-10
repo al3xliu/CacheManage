@@ -57,7 +57,7 @@ dependencies {
 
     ext.checkerFrameworkVersion = '3.1.1'
     annotationProcessor "org.checkerframework:linear-checker:0.1-SNAPSHOT"
-//    implementation files("../../../../linear-checker-qual-android/build/libs/linear-checker-qual-android.jar")
+    implementation files("../../../../linear-checker-qual-android/build/libs/linear-checker-qual-android.jar")
     checkerFrameworkAnnotatedJDK files("../../../../jdk8.jar")
     compileOnly "org.checkerframework:checker-qual-android:${checkerFrameworkVersion}"
     errorproneJavac 'com.google.errorprone:javac:9+181-r4173-1'
