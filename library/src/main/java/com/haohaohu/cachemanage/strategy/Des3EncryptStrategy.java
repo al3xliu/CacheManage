@@ -5,13 +5,15 @@ import android.content.Context;
 import android.provider.Settings;
 import android.text.TextUtils;
 
+
+
 import com.haohaohu.cachemanage.util.Des3Util;
 import com.haohaohu.cachemanage.util.KeyStoreHelper;
 
 import java.security.InvalidAlgorithmParameterException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
-
+import org.checkerframework.checker.linear.qual.*;
 /**
  * Des3加密策略
  *

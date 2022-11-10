@@ -1,7 +1,7 @@
 package com.haohaohu.cachemanage.util;
 
 import android.text.TextUtils;
-import org.checkerframework.common.aliasing.qual.Unique;
+import org.checkerframework.checker.linear.qual.*;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
