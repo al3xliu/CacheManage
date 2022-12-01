@@ -20,7 +20,7 @@ android {
                     classNames.add("org.checkerframework.checker.linear.LinearChecker")
             // Uncomment to do the strongboxbacked checking.
             // javaCompileOptions.annotationProcessorOptions.arguments.put("lint", "strongboxbacked")
-            javaCompileOptions.annotationProcessorOptions.arguments.put("stubs", "IvParameterSpec.astub")
+            javaCompileOptions.annotationProcessorOptions.arguments.put("stubs", "/Users/alexliu/projects/linear-checker/src/main/java/org/checkerframework/checker/linear/")
         }
     }
 
